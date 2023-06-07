@@ -10,9 +10,17 @@ export default {
 <template>
     <!-- card film di esempio -->
     <div class="card text-center">
-        <!-- <img :src="details.card_images[0].image_url" alt="card-img"> -->
-        <h4></h4>
-        <div></div>
+        <!-- dobbiamo stampare:
+            -Titolo
+            -Titolo Originale
+            -Lingua
+            -Voto -->
+
+        <h5>{{ details.title }}</h5>
+        <h5>{{ details.original_title }}</h5>
+        <h5>{{ details.original_language }}</h5>
+        <h5>{{ details.vote_average }}</h5>
+
     </div>
 </template>
 

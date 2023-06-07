@@ -24,12 +24,15 @@ export default {
       if (store.searchFilms !== "") {
         myUrl += `${store.searchFilms}`
         console.log(myUrl);
+      } else {
+        myUrl += ``
       }
 
-      axios.get(store.apiFilmsURL)
+      axios.get(myUrl)
         .then(res => {
           store.filmList = res.data.results;
           store.loading = false;
+          store.apiFilmsURL += ""
         })
         .catch(err => {
           console.log(err);
