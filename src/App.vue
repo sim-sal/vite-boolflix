@@ -17,17 +17,18 @@ export default {
     }
   },
   methods: {
-    getCharacters() {
+    getCardFilms() {
 
-      let myUrl = store.apiURL;
+      let myUrl = store.apiFilmsURL;
 
-      if (store.searchArchetypes !== "") {
-        myUrl
+      if (store.searchFilms !== "") {
+        myUrl += `${store.searchFilms}`
+        console.log(myUrl);
       }
 
-      axios.get(store.apiURL)
+      axios.get(store.apiFilmsURL)
         .then(res => {
-          store.charactersList = res.data.data;
+          store.filmList = res.data.results;
           store.loading = false;
         })
         .catch(err => {
@@ -38,7 +39,7 @@ export default {
 
   },
   created() {
-    this.getCharacters();
+    this.getCardFilms();
 
   }
 } 
@@ -48,7 +49,7 @@ export default {
 
 <template>
   <header>
-    <AppSearch />
+    <AppSearch @mysearch="getCardFilms" />
   </header>
 
   <main>

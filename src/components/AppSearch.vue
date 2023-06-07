@@ -18,7 +18,7 @@ export default {
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Cerca film" aria-label="Search"
                     v-model="store.searchFilms">
-                <button class="btn btn-outline-success" type="submit" @click="$emit('mysearch')">Cerca</button>
+                <button class="btn btn-outline-success" type="submit" @click.prevent="$emit('mysearch')">Cerca</button>
             </form>
         </div>
     </nav>
