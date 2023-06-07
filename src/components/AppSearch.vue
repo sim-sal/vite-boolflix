@@ -3,6 +3,11 @@ import { store } from '../store'
 
 export default {
     name: "AppSearch",
+    data() {
+        return {
+            store,
+        }
+    }
 }
 </script>
 
@@ -11,8 +16,9 @@ export default {
         <div class="container-fluid">
             <a class="navbar-brand"><strong>BOOLFLIX</strong></a>
             <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <input class="form-control me-2" type="search" placeholder="Cerca film" aria-label="Search"
+                    v-model="store.searchFilms">
+                <button class="btn btn-outline-success" type="submit" @click="$emit('mysearch')">Cerca</button>
             </form>
         </div>
     </nav>

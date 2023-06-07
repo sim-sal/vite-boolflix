@@ -1,0 +1,29 @@
+<script>
+import { store } from '../store'
+
+import SingleCardFilm from './SingleCardFilm.vue';
+
+export default {
+    name: 'CharactersList',
+    components: {
+        SingleCardFilm
+    },
+    data() {
+        return {
+            store,
+        }
+    }
+}
+</script>
+
+<template>
+    <section class="container">
+
+        <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+            <SingleCardFilm v-for="film in store.filmList" :details="film" class="col-md-4 ms-md-3" :key="film.id" />
+        </div>
+
+    </section>
+</template>
+
+<style scoped lang="scss"></style>
