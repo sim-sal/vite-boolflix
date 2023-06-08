@@ -1,6 +1,17 @@
 <script>
+import { store } from '../store'
+import LanguageFlags from './LanguageFlags.vue'
+
 export default {
     name: 'SingleCardFilm',
+    components: {
+        LanguageFlags
+    },
+    data() {
+        return {
+            store,
+        }
+    },
     props: {
         details: Object
     }
@@ -10,15 +21,14 @@ export default {
 <template>
     <!-- card film di esempio -->
     <div class="card text-center">
-        <!-- dobbiamo stampare:
-            -Titolo
-            -Titolo Originale
-            -Lingua
-            -Voto -->
 
+        <!-- titolo -->
         <h5>{{ details.title }}</h5>
+        <!-- titolo originale -->
         <h5>{{ details.original_title }}</h5>
-        <h5>{{ details.original_language }}</h5>
+        <!-- lingua -->
+        <LanguageFlags :filmLanguage="details.original_language" />
+        <!-- voto -->
         <h5>{{ details.vote_average }}</h5>
 
     </div>
