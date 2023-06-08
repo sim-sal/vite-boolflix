@@ -24,7 +24,7 @@ export default {
         </div>
 
         <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-            <SingleCardFilm v-for="film in store.filmList" :details="film" class="col-md-4 ms-md-3" :key="film.id" />
+            <SingleCardFilm v-for="film in store.filmList" :details="film" class="col-md-6 ms-md-6" :key="film.id" />
         </div>
 
     </section>

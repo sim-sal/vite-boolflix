@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-    <div v-if="store.languageList.includes(filmLanguage)" class="d-flex pt-2">
+    <div v-if="store.languageList.includes(filmLanguage)">
         <h5>Lingua:</h5>
         <img class="my_flag" :src="`/${filmLanguage}.png`" alt="">
     </div>
@@ -25,4 +25,8 @@ export default {
     </div>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.my_flag {
+    max-width: 20%;
+}
+</style>
