@@ -19,6 +19,10 @@ export default {
 <template>
     <section class="container">
 
+        <div v-if="(store.filmList.length === 0)">
+            <h1 class="text-center">...In attesa di ricerca...</h1>
+        </div>
+
         <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
             <SingleCardFilm v-for="film in store.filmList" :details="film" class="col-md-4 ms-md-3" :key="film.id" />
         </div>
