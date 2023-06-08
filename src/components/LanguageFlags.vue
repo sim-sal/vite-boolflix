@@ -3,13 +3,13 @@ import { store } from '../store'
 
 export default {
     name: 'LanguageFlags',
-    props: {
-        filmLanguage: String
-    },
     data() {
         return {
             store,
         }
+    },
+    props: {
+        filmLanguage: String
     }
 }
 </script>
@@ -17,7 +17,7 @@ export default {
 <template>
     <div v-if="store.languageList.includes(filmLanguage)" class="d-flex pt-2">
         <h5>Lingua:</h5>
-        <img class="my_flag" :src="`../assets/${filmLanguage}.png`" alt="">
+        <img class="my_flag" :src="`/${filmLanguage}.png`" alt="">
     </div>
     <div v-else class="pt-2">
         <h5>Lingua: </h5>
