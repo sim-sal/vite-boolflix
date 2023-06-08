@@ -1,11 +1,13 @@
 <script>
 import { store } from '../store'
 import LanguageFlags from './LanguageFlags.vue'
+import StarRating from './StarRating.vue'
 
 export default {
     name: 'SingleCardFilm',
     components: {
-        LanguageFlags
+        LanguageFlags,
+        StarRating
     },
     data() {
         return {
@@ -29,7 +31,8 @@ export default {
         <!-- lingua -->
         <LanguageFlags :filmLanguage="details.original_language" />
         <!-- voto -->
-        <h5>{{ Math.ceil(details.vote_average / 2) }}</h5>
+        <StarRating :voteValue="Math.ceil(details.vote_average / 2)" />
+
 
     </div>
 </template>

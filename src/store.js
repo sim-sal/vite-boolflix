@@ -5,5 +5,6 @@ export const store = reactive({
     searchFilms: "",
     filmList: [],
     languageList: ["it", "en", "fr", "de", "es"],
+    voteValue: [1, 2, 3, 4, 5],
     loading: true
 })
