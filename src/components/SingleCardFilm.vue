@@ -29,7 +29,7 @@ export default {
         <!-- lingua -->
         <LanguageFlags :filmLanguage="details.original_language" />
         <!-- voto -->
-        <h5>{{ details.vote_average }}</h5>
+        <h5>{{ Math.ceil(details.vote_average / 2) }}</h5>
 
     </div>
 </template>
