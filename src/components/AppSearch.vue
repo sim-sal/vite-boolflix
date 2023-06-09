@@ -7,6 +7,11 @@ export default {
         return {
             store,
         }
+    },
+    methods: {
+        reloadPage() {
+            window.location.reload();
+        }
     }
 }
 </script>
@@ -14,7 +19,7 @@ export default {
 <template>
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand"><strong>BOOLFLIX</strong></a>
+            <a class="navbar-brand" @click="reloadPage"><strong>BOOLFLIX</strong></a>
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Cerca film" aria-label="Search"
                     v-model="store.searchFilms">
@@ -34,6 +39,11 @@ export default {
         a {
             color: red;
             font-size: 50px;
+
+            &:hover {
+                cursor: pointer;
+                text-shadow: 1px 1px white;
+            }
         }
 
         .d-flex {
@@ -51,3 +61,4 @@ export default {
 
 }
 </style>
+

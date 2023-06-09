@@ -23,12 +23,12 @@ export default {
             <h1 class="text-center">...In attesa di ricerca...</h1>
         </div>
 
-        <h2>MOVIES:</h2>
+        <h2 v-if="(store.filmList.length > 0)">MOVIES:</h2>
         <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
             <SingleCardFilm v-for="film in store.filmList" :details="film" class="col-md-6 ms-md-6" :key="film.id" />
         </div>
 
-        <h2>SERIE TV:</h2>
+        <h2 v-if="(store.serieTvList.length > 0)">SERIE TV:</h2>
         <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
             <SingleCardFilm v-for="film in store.serieTvList" :details="film" class="col-md-6 ms-md-6" :key="film.id" />
         </div>
