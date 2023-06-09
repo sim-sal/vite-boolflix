@@ -54,6 +54,7 @@ export default {
 
                 &:hover {
                     background-color: red;
+                    border: 1px solid black;
                     color: white;
                 }
             }
