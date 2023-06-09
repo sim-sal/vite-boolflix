@@ -19,7 +19,7 @@ export default {
 <template>
     <section class="container">
 
-        <div v-if="(store.filmList.length === 0)">
+        <div v-if="store.serieTvList.length === 0">
             <h1 class="text-center">...In attesa di ricerca...</h1>
         </div>
 
