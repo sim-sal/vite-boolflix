@@ -42,6 +42,9 @@ export default {
             <!-- voto -->
             <span>Rating:</span>
             <StarRating :voteValue="Math.ceil(details.vote_average / 2)" />
+            <!-- trama -->
+            <span>Overview: </span>
+            <span class="overview">{{ details.overview }}</span>
         </div>
 
     </div>
@@ -61,6 +64,28 @@ export default {
 
     .deatils_film {
         display: none;
+        max-height: 350px;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: #858585;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: rgb(36, 36, 36);
+            border-radius: 5px;
+        }
+
+        .overview {
+            color: white;
+            font-size: 12px;
+        }
     }
 
     &:hover {
