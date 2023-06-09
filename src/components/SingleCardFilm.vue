@@ -33,7 +33,7 @@ export default {
         <div class="deatils_film">
             <!-- titolo -->
             <span>Titolo:</span>
-            <h4>{{ details.title }} {{ details.name }}</h4>
+            <h5>{{ details.title }} {{ details.name }}</h5>
             <!-- titolo originale -->
             <span>Titolo originale:</span>
             <h6>{{ details.original_title }} {{ details.original_name }}</h6>
