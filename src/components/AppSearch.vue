@@ -32,6 +32,7 @@ export default {
 <style scoped lang="scss">
 .navbar {
     padding-top: 0;
+    padding-bottom: 0;
 
     .container-fluid {
         background-color: rgb(48, 48, 48);

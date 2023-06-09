@@ -70,10 +70,33 @@ export default {
   </header>
 
   <main>
-    <CardFilmsList />
+    <div class="main-container">
+      <CardFilmsList />
+    </div>
   </main>
 </template>
 
 <style lang="scss">
 @use './styles/general.scss';
+
+.main-container {
+  background-color: rgb(26, 26, 26);
+  height: 88.8vh;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #858585;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+  }
+}
 </style>
