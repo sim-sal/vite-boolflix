@@ -19,20 +19,34 @@ export default {
   methods: {
     getCardFilms() {
 
-      let myUrl = store.apiFilmsURL;
+      let myFilmUrl = store.apiFilmsURL;
+      let mySerieUrl = store.apiSerieURL;
 
       if (store.searchFilms !== "") {
-        myUrl += `${store.searchFilms}`
-        console.log(myUrl);
+        myFilmUrl += `${store.searchFilms}`
+        console.log(myFilmUrl);
+        mySerieUrl += `${store.searchFilms}`
+        console.log(mySerieUrl);
       } else {
-        myUrl += ``
+        myFilmUrl += ``
+        mySerieUrl += ``
       }
 
-      axios.get(myUrl)
+      axios.get(myFilmUrl)
         .then(res => {
           store.filmList = res.data.results;
           store.loading = false;
           store.apiFilmsURL += ""
+        })
+        .catch(err => {
+          console.log(err);
+        })
+
+      axios.get(mySerieUrl)
+        .then(res => {
+          store.serieTvList = res.data.results;
+          store.loading = false;
+          store.apiSerieURL += ""
         })
         .catch(err => {
           console.log(err);

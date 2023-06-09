@@ -25,9 +25,9 @@ export default {
     <div class="card text-center">
 
         <!-- titolo -->
-        <h5>{{ details.title }}</h5>
+        <h5>{{ details.title }} {{ details.name }}</h5>
         <!-- titolo originale -->
-        <h5>{{ details.original_title }}</h5>
+        <h5>{{ details.original_title }} {{ details.original_name }}</h5>
         <!-- lingua -->
         <LanguageFlags :filmLanguage="details.original_language" />
         <!-- voto -->
