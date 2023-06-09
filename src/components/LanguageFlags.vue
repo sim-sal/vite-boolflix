@@ -16,11 +16,9 @@ export default {
 
 <template>
     <div v-if="store.languageList.includes(filmLanguage)">
-        <h5>Lingua:</h5>
         <img class="my_flag" :src="`/${filmLanguage}.png`" alt="">
     </div>
     <div v-else class="pt-2">
-        <h5>Lingua: </h5>
         <p class="fs-5">{{ filmLanguage.toUpperCase() }}</p>
     </div>
 </template>

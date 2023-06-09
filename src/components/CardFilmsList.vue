@@ -38,6 +38,8 @@ export default {
 
 <style scoped lang="scss">
 .container {
+
+    h1,
     h2 {
         color: white;
     }
